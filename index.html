@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shauharda Khadka — Researcher</title>
+<meta name="description" content="Shauharda (Shaw) Khadka — Senior Applied Scientist at Microsoft. Research in deep reinforcement learning, multiagent systems, and robotics." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300;9..144,400;9..144,500;9..144,600&family=GT+Sectra:wght@400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6ef;
+    --bg-soft: #f2ebdd;
+    --ink: #2a2824;
+    --ink-soft: #5a5147;
+    --ink-mute: #8a8175;
+    --rule: #e2d8c3;
+    --accent: #c65d3a;
+    --accent-soft: #e89b6f;
+    --sky: #6a8fa8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.55;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* subtle paper grain */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.28;
+    z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.15 0 0 0 0 0.12 0 0 0 0 0.08 0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    padding: 36px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  nav .mark {
+    color: var(--ink);
+    font-weight: 400;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+  }
+  nav a {
+    color: var(--ink-mute);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  nav a:hover { color: var(--accent); }
+
+  /* ─── HERO ─── */
+  header.hero {
+    padding: 100px 0 90px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 56px;
+    align-items: end;
+  }
+
+  .hero-text {
+    min-width: 0;
+  }
+
+  .portrait {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 30px 60px -30px rgba(42, 40, 36, 0.35), 0 0 0 1px rgba(42, 40, 36, 0.06);
+  }
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.95) contrast(1.02);
+  }
+  .portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, transparent 60%, rgba(198, 93, 58, 0.08));
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1.name {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(48px, 8vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+    font-variation-settings: "SOFT" 80;
+  }
+  h1.name em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  .tagline {
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 640px;
+    font-weight: 400;
+  }
+  .tagline em {
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  .hero-meta {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--ink-mute);
+  }
+  .hero-meta span::before {
+    content: "◦  ";
+    color: var(--accent);
+  }
+
+  /* ─── SECTIONS ─── */
+  section {
+    padding: 90px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .section-label::before {
+    content: attr(data-num);
+    color: var(--accent);
+    font-weight: 400;
+  }
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* about */
+  .about p {
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: var(--ink-soft);
+    max-width: 680px;
+  }
+  .about p:first-of-type {
+    font-size: 24px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .about p em {
+    font-style: italic;
+    color: var(--ink);
+  }
+  .about p.currently {
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    padding: 18px 22px;
+    border-left: 2px solid var(--accent);
+    background: rgba(198, 93, 58, 0.04);
+    margin-bottom: 44px;
+    max-width: 680px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+  .about p.currently em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--accent);
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  .about p.personal {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px dashed var(--rule);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-mute);
+    max-width: 640px;
+  }
+  .drop-cap::first-letter {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 4.2em;
+    float: left;
+    line-height: 0.85;
+    padding: 8px 12px 0 0;
+    color: var(--accent);
+    font-variation-settings: "SOFT" 100;
+  }
+
+  /* research */
+  .research-grid {
+    display: grid;
+    gap: 36px;
+  }
+  .research-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .research-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .research-item h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.2;
+    font-variation-settings: "SOFT" 100;
+  }
+  .research-item p {
+    color: var(--ink-soft);
+    line-height: 1.6;
+    font-size: 17px;
+  }
+
+  /* publications */
+  .pubs {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .pub {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 28px;
+    align-items: baseline;
+  }
+  .pub-venue {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+  .pub-title {
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .pub-title em {
+    font-style: italic;
+  }
+  .pub-authors {
+    display: block;
+    font-size: 14px;
+    color: var(--ink-mute);
+    margin-top: 6px;
+    font-style: italic;
+  }
+  .pub-desc {
+    display: block;
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .pub-footer {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px dashed var(--rule);
+    font-size: 15px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .pub-footer a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+
+  /* experience */
+  .exp {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .exp-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 32px;
+    align-items: baseline;
+  }
+  .exp-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.08em;
+  }
+  .exp-role {
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .exp-role strong {
+    font-weight: 500;
+  }
+  .exp-role span {
+    display: block;
+    font-style: italic;
+    color: var(--ink-mute);
+    font-size: 15px;
+    margin-top: 4px;
+  }
+
+  /* contact */
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .contact-block a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    color: var(--ink);
+    transition: padding 0.3s cubic-bezier(.2,.8,.2,1), color 0.2s ease;
+  }
+  .contact-block a:hover {
+    padding-left: 16px;
+    color: var(--accent);
+  }
+  .contact-block a:first-of-type { border-top: 1px solid var(--rule); }
+  .contact-label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .contact-handle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-mute);
+    letter-spacing: 0.04em;
+  }
+
+  /* footer */
+  footer {
+    padding: 60px 0 80px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  footer .ornament {
+    color: var(--accent);
+    margin: 0 16px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  /* fade-in */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* responsive */
+  @media (max-width: 720px) {
+    .wrap { padding: 0 22px; }
+    nav ul { gap: 18px; }
+    header.hero {
+      grid-template-columns: 1fr;
+      padding: 60px 0 60px;
+      gap: 40px;
+    }
+    .portrait {
+      max-width: 220px;
+      order: -1;
+    }
+    section { padding: 70px 0; }
+    .research-item, .pub, .exp-item {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .research-item h3 { font-size: 20px; }
+    .pub-venue { padding-top: 0; }
+    .about p:first-of-type { font-size: 21px; }
+    .about p { font-size: 18px; }
+    .contact-block a {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- NAV -->
+  <nav>
+    <span class="mark">SK</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero reveal">
+    <div class="hero-text">
+      <div class="eyebrow">Senior Applied Scientist · Microsoft</div>
+      <h1 class="name">Shauharda<br/><em>Khadka</em></h1>
+      <p class="tagline">
+        Bridging foundational <em>reinforcement learning</em> research and production AI engineering at a scale that serves billions of machines every day.
+      </p>
+    </div>
+    <div class="portrait">
+      <img src="portrait.jpeg" alt="Shauharda Khadka" />
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="about reveal">
+    <div class="section-label" data-num="01">About</div>
+    <p class="drop-cap">
+      I am a researcher and applied scientist (most people call me Shaw) with nearly a decade of experience building artificial intelligence at scale. My work sits at the intersection of <em>deep reinforcement learning</em>, multiagent coordination, and large language models — spanning theoretical contribution and production deployment.
+    </p>
+    <p class="currently">
+      <em>Currently captivated by</em> &nbsp;—&nbsp; how lessons from evolutionary multiagent RL transfer to the post-training of large language models. How should "exploration" adapt when the agent is a 200B-parameter reasoner.
+    </p>
+    <p>
+      At <em>Microsoft</em>, I cover research and engineering efforts that apply reinforcement learning to fine-tune large language models for cybersecurity and cloud defense — serving billions of Defender queries every day. A growing thread of this work involves <em>reverse-engineering and fine-tuning large language models</em> for security-specific reasoning, where the constraints of latency, scale, and adversarial robustness force interesting research questions and engineering challenges. This work spans engineering, Responsible AI, and the full research-to-production lifecycle. Earlier, at Intel Labs, I applied reinforcement learning to accelerator-aware policy optimization, achieving up to 78% inference speed-up on BERT and ResNet workloads on Intel's NNP-I chip.
+    </p>
+    <p>
+      PhD in Robotics from Oregon State University, where I worked with Dr. Kagan Tumer on a long-standing question: how do you assign credit in multi-robot systems where success is collective and emergent? My thesis answered with memory-augmented architectures that let robots learn to cooperate without hand-engineered rewards.
+    </p>
+    <p class="personal">
+      Off the clock, I like to paint, dive, and spend time thinking about how biological intelligence is so sample-efficient. The same curiosity that pulled me into physics and mathematics as an undergrad still runs the show.
+    </p>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="reveal">
+    <div class="section-label" data-num="02">Research</div>
+    <div class="research-grid">
+
+      <div class="research-item">
+        <h3>Reinforcement Learning</h3>
+        <p>Sample efficiency, exploration, and credit assignment — particularly the interplay between gradient-based optimization and population-based search. Foundational work on evolutionary RL and collaborative learner portfolios.</p>
+      </div>
+
+      <div class="research-item">
+        <h3>Large Language Models</h3>
+        <p>Post-training large language models with reinforcement learning — fine-tuning, reward modeling, and alignment for domain-specific reasoning, especially in adversarial and high-stakes settings like security.</p>
+      </div>
+
+      <div class="research-item">
+        <h3>Cybersecurity</h3>
+        <p>Real-world cybersecurity research that ships — applying learning systems to threat detection and cloud defense at a scale that affects billions of machines every day, where reliability, latency, and adversarial robustness are first-class constraints, not afterthoughts.</p>
+      </div>
+
+      <div class="research-item">
+        <h3>Multiagent Systems</h3>
+        <p>Coordination under sparse, coupled rewards; dynamic skill selection; and learning intrinsic reward structures that allow heterogeneous agents to cooperate without hand-engineered shaping.</p>
+      </div>
+
+      <div class="research-item">
+        <h3>Robotics &amp; Control</h3>
+        <p>Real-world multi-robot control with reinforcement learning — pursuing the long-running question of how embodied agents learn dexterous, generalizable behavior from limited supervision.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="writing" class="reveal">
+    <div class="section-label" data-num="03">Selected Writing</div>
+    <div class="pubs">
+
+      <div class="pub">
+        <div class="pub-venue">NeurIPS · 2018</div>
+        <div>
+          <div class="pub-title"><em>Evolution-Guided Policy Gradients in Reinforcement Learning</em></div>
+          <span class="pub-authors">S. Khadka, K. Tumer</span>
+          <span class="pub-desc">The original ERL paper — combining gradient-based RL with evolutionary search to address exploration and credit-assignment failures in deep RL. Widely cited as a foundation for hybrid RL methods.</span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-venue">ICML · 2019</div>
+        <div>
+          <div class="pub-title"><em>Collaborative Evolutionary Reinforcement Learning</em> (CERL)</div>
+          <span class="pub-authors">S. Khadka, S. Majumdar, T. Nassar, Z. Dwiel, E. Tumer, S. Miret, Y. Liu, K. Tumer</span>
+          <span class="pub-desc">A scalable framework where a portfolio of TD3 learners with varying time-horizons explores together via a shared replay buffer. Solves Mujoco Humanoid where individual learners fail.</span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-venue">ICML · 2020</div>
+        <div>
+          <div class="pub-title"><em>Evolutionary Reinforcement Learning for Sample-Efficient Multiagent Coordination</em> (MERL)</div>
+          <span class="pub-authors">S. Majumdar, S. Khadka, S. Miret, S. McAleer, K. Tumer</span>
+          <span class="pub-desc">A hybrid algorithm that resolves the alignment problem between local (per-agent) and global (team) rewards in cooperative multiagent RL — without requiring hand-designed reward shaping.</span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-venue">ICLR · 2021</div>
+        <div>
+          <div class="pub-title"><em>Optimizing Memory Placement using Evolutionary Graph Reinforcement Learning</em></div>
+          <span class="pub-authors">S. Khadka, E. Aflalo, M. Marder, A. Ben-David, S. Miret, S. Mannor, T. Hazan, H. Tang, S. Majumdar</span>
+          <span class="pub-desc">An RL-based compiler for deep learning accelerators that learns where to place tensors in memory. Treats hardware as a learnable graph problem rather than a fixed target.</span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-venue">Evol. Comput. · 2019</div>
+        <div>
+          <div class="pub-title"><em>Neuroevolution of a Modular Memory-Augmented Neural Network for Deep Memory Problems</em></div>
+          <span class="pub-authors">S. Khadka, J. J. Chung, K. Tumer</span>
+          <span class="pub-desc">Modular Memory Units (MMUs) — an external-memory architecture in the lineage of Neural Turing Machines, evolved rather than gradient-trained, for tasks requiring long-horizon recall.</span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-venue">AAMAS · 2019</div>
+        <div>
+          <div class="pub-title"><em>Memory-based Multiagent One-Shot Learning</em> (DMMU)</div>
+          <span class="pub-authors">S. Khadka, C. Yates, K. Tumer</span>
+          <span class="pub-desc">A distributed shared-memory framework enabling teams of agents to adapt jointly from a single demonstration, where the relevant signal is spread across the team rather than within any one agent.</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="pub-footer">
+      A complete list — including 20+ first-author and collaborative works — is available on <a href="https://scholar.google.com/citations?user=s-4Eoi8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="reveal">
+    <div class="section-label" data-num="04">Experience</div>
+    <div class="exp">
+      <div class="exp-item">
+        <div class="exp-year">2020 — Present</div>
+        <div class="exp-role">
+          <strong>Senior Applied Scientist</strong>
+          <span>Microsoft · New York</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-year">2019 — 2020</div>
+        <div class="exp-role">
+          <strong>Research Scientist</strong>
+          <span>Intel Labs · AI Research</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-year">2015 — 2019</div>
+        <div class="exp-role">
+          <strong>PhD, Robotics</strong>
+          <span>Oregon State University · Advisor: Kagan Tumer</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-year">2010 — 2014</div>
+        <div class="exp-role">
+          <strong>BSc, Engineering Physics</strong>
+          <span>Ramapo College of New Jersey</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <div class="section-label" data-num="05">Elsewhere</div>
+    <div class="contact-block">
+      <a href="mailto:91page@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-handle">91page@gmail.com →</span>
+      </a>
+      <a href="https://scholar.google.com/citations?user=s-4Eoi8AAAAJ" target="_blank" rel="noopener">
+        <span class="contact-label">Google Scholar</span>
+        <span class="contact-handle">scholar.google.com →</span>
+      </a>
+      <a href="https://www.linkedin.com/in/shauharda-shaw-khadka-phd-336a3041/" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-handle">/in/shauharda-shaw-khadka-phd →</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    Shauharda Khadka <span class="ornament">·</span> 2026
+  </footer>
+
+</div>
+
+<script>
+  // staggered reveal on scroll
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
