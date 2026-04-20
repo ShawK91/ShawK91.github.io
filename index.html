@@ -6,14 +6,14 @@
 
 <!-- Primary SEO -->
 <title>Khadka</title>
-<meta name="description" content="Shauharda (Shaw) Khadka — Senior Applied Scientist at Microsoft. Bridging foundational reinforcement learning research and production AI engineering at scale." />
+<meta name="description" content="Shauharda (Shaw) Khadka, Senior Applied Scientist at Microsoft. Bridging foundational reinforcement learning research and production AI engineering at scale." />
 <meta name="author" content="Shauharda (Shaw) Khadka" />
 <meta name="keywords" content="Shauharda Khadka, Shaw Khadka, reinforcement learning, multiagent systems, robotics, large language models, Microsoft, AI researcher" />
 <link rel="canonical" href="https://shawk91.github.io/" />
 
 <!-- Open Graph (Facebook, LinkedIn, iMessage, Slack) -->
 <meta property="og:type" content="profile" />
-<meta property="og:title" content="Shauharda (Shaw) Khadka — Researcher, Microsoft" />
+<meta property="og:title" content="Shauharda (Shaw) Khadka, Researcher at Microsoft" />
 <meta property="og:description" content="Bridging foundational reinforcement learning research and production AI engineering at scale." />
 <meta property="og:url" content="https://shawk91.github.io/" />
 <meta property="og:image" content="https://shawk91.github.io/portrait.jpeg" />
@@ -24,7 +24,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Shauharda (Shaw) Khadka — Researcher, Microsoft" />
+<meta name="twitter:title" content="Shauharda (Shaw) Khadka, Researcher at Microsoft" />
 <meta name="twitter:description" content="Bridging foundational reinforcement learning research and production AI engineering at scale." />
 <meta name="twitter:image" content="https://shawk91.github.io/portrait.jpeg" />
 
@@ -191,18 +191,20 @@
 
   .eyebrow {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
+    margin-top: 8px;
     margin-bottom: 28px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
+    font-weight: 400;
   }
   .eyebrow::before {
     content: "";
-    width: 28px;
+    width: 32px;
     height: 1px;
     background: var(--accent);
   }
@@ -213,7 +215,7 @@
     font-size: clamp(48px, 8vw, 92px);
     line-height: 0.95;
     letter-spacing: -0.025em;
-    margin-bottom: 36px;
+    margin-bottom: 18px;
     font-variation-settings: "SOFT" 80;
   }
   h1.name em {
@@ -557,11 +559,11 @@
 
   <!-- NAV -->
   <nav>
-    <span class="mark">SK</span>
+    <span class="mark">Shaw</span>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
-      <li><a href="#writing">Writing</a></li>
+      <li><a href="#writing">Publications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -569,8 +571,8 @@
   <!-- HERO -->
   <header class="hero reveal">
     <div class="hero-text">
-      <div class="eyebrow">Senior Applied Scientist · Microsoft</div>
       <h1 class="name">Shauharda<br/><em>Khadka</em></h1>
+      <div class="eyebrow">Senior Applied Scientist · Microsoft</div>
       <p class="tagline">
         Bridging foundational <em>reinforcement learning</em> research and production AI engineering at a scale that serves billions of machines every day.
       </p>
@@ -584,13 +586,13 @@
   <section id="about" class="about reveal">
     <div class="section-label" data-num="01">About</div>
     <p class="drop-cap">
-      I am a researcher and applied scientist (most people call me Shaw) with nearly a decade of experience building artificial intelligence at scale. My work sits at the intersection of <em>deep reinforcement learning</em>, multiagent coordination, and large language models — spanning theoretical contribution and production deployment.
+      I am a researcher and applied scientist (most people call me Shaw) with nearly a decade of experience building artificial intelligence at scale. My work sits at the intersection of <em>deep reinforcement learning</em>, multiagent coordination, and large language models, spanning theoretical contribution and production deployment.
     </p>
     <p class="currently">
-      <em>Currently captivated by</em> &nbsp;—&nbsp; how lessons from evolutionary multiagent RL transfer to the post-training of large language models. How should "exploration" adapt when the agent is a 200B-parameter reasoner.
+      <em>Currently captivated by:</em> &nbsp; how lessons from evolutionary multiagent RL transfer to the post-training of large language models. How should "exploration" adapt when the agent is a 200B-parameter reasoner.
     </p>
     <p>
-      At <em>Microsoft</em>, I cover research and engineering efforts that apply reinforcement learning to fine-tune large language models for cybersecurity and cloud defense — serving billions of Defender queries every day. A growing thread of this work involves <em>reverse-engineering and fine-tuning large language models</em> for security-specific reasoning, where the constraints of latency, scale, and adversarial robustness force interesting research questions and engineering challenges. This work spans engineering, Responsible AI, and the full research-to-production lifecycle. Earlier, at Intel Labs, I applied reinforcement learning to accelerator-aware policy optimization, achieving up to 78% inference speed-up on BERT and ResNet workloads on Intel's NNP-I chip.
+      At <em>Microsoft</em>, I cover research and engineering efforts that apply reinforcement learning to fine-tune large language models for cybersecurity and cloud defense, serving billions of Defender queries every day. A growing thread of this work involves <em>reverse-engineering and fine-tuning large language models</em> for security-specific reasoning, where the constraints of latency, scale, and adversarial robustness force interesting research questions and engineering challenges. This work spans engineering, Responsible AI, and the full research-to-production lifecycle. Earlier, at Intel Labs, I applied reinforcement learning to accelerator-aware policy optimization, achieving up to 78% inference speed-up on BERT and ResNet workloads on Intel's NNP-I chip.
     </p>
     <p>
       PhD in Robotics from Oregon State University, where I worked with Dr. Kagan Tumer on a long-standing question: how do you assign credit in multi-robot systems where success is collective and emergent? My thesis answered with memory-augmented architectures that let robots learn to cooperate without hand-engineered rewards.
@@ -607,17 +609,17 @@
 
       <div class="research-item">
         <h3>Reinforcement Learning</h3>
-        <p>Sample efficiency, exploration, and credit assignment — particularly the interplay between gradient-based optimization and population-based search. Foundational work on evolutionary RL and collaborative learner portfolios.</p>
+        <p>Sample efficiency, exploration, and credit assignment: particularly the interplay between gradient-based optimization and population-based search. Foundational work on evolutionary RL and collaborative learner portfolios.</p>
       </div>
 
       <div class="research-item">
         <h3>Large Language Models</h3>
-        <p>Post-training large language models with reinforcement learning — fine-tuning, reward modeling, and alignment for domain-specific reasoning, especially in adversarial and high-stakes settings like security.</p>
+        <p>Post-training large language models with reinforcement learning: fine-tuning, reward modeling, and alignment for domain-specific reasoning, especially in adversarial and high-stakes settings like security.</p>
       </div>
 
       <div class="research-item">
         <h3>Cybersecurity</h3>
-        <p>Real-world cybersecurity research that ships — applying learning systems to threat detection and cloud defense at a scale that affects billions of machines every day, where reliability, latency, and adversarial robustness are first-class constraints, not afterthoughts.</p>
+        <p>Real-world cybersecurity research that ships: applying learning systems to threat detection and cloud defense at a scale that affects billions of machines every day, where reliability, latency, and adversarial robustness are first-class constraints, not afterthoughts.</p>
       </div>
 
       <div class="research-item">
@@ -627,7 +629,7 @@
 
       <div class="research-item">
         <h3>Robotics &amp; Control</h3>
-        <p>Real-world multi-robot control with reinforcement learning — pursuing the long-running question of how embodied agents learn dexterous, generalizable behavior from limited supervision.</p>
+        <p>Real-world multi-robot control with reinforcement learning: pursuing the long-running question of how embodied agents learn dexterous, generalizable behavior from limited supervision.</p>
       </div>
 
     </div>
@@ -635,7 +637,7 @@
 
   <!-- PUBLICATIONS -->
   <section id="writing" class="reveal">
-    <div class="section-label" data-num="03">Selected Writing</div>
+    <div class="section-label" data-num="03">Selected Publications</div>
     <div class="pubs">
 
       <div class="pub">
@@ -643,7 +645,7 @@
         <div>
           <div class="pub-title"><em>Evolution-Guided Policy Gradients in Reinforcement Learning</em></div>
           <span class="pub-authors">S. Khadka, K. Tumer</span>
-          <span class="pub-desc">The original ERL paper — combining gradient-based RL with evolutionary search to address exploration and credit-assignment failures in deep RL. Widely cited as a foundation for hybrid RL methods.</span>
+          <span class="pub-desc">The original ERL paper: combining gradient-based RL with evolutionary search to address exploration and credit-assignment failures in deep RL. Widely cited as a foundation for hybrid RL methods.</span>
         </div>
       </div>
 
@@ -661,7 +663,7 @@
         <div>
           <div class="pub-title"><em>Evolutionary Reinforcement Learning for Sample-Efficient Multiagent Coordination</em> (MERL)</div>
           <span class="pub-authors">S. Majumdar, S. Khadka, S. Miret, S. McAleer, K. Tumer</span>
-          <span class="pub-desc">A hybrid algorithm that resolves the alignment problem between local (per-agent) and global (team) rewards in cooperative multiagent RL — without requiring hand-designed reward shaping.</span>
+          <span class="pub-desc">A hybrid algorithm that resolves the alignment problem between local (per-agent) and global (team) rewards in cooperative multiagent RL, without requiring hand-designed reward shaping.</span>
         </div>
       </div>
 
@@ -679,7 +681,7 @@
         <div>
           <div class="pub-title"><em>Neuroevolution of a Modular Memory-Augmented Neural Network for Deep Memory Problems</em></div>
           <span class="pub-authors">S. Khadka, J. J. Chung, K. Tumer</span>
-          <span class="pub-desc">Modular Memory Units (MMUs) — an external-memory architecture in the lineage of Neural Turing Machines, evolved rather than gradient-trained, for tasks requiring long-horizon recall.</span>
+          <span class="pub-desc">Modular Memory Units (MMUs): an external-memory architecture in the lineage of Neural Turing Machines, evolved rather than gradient-trained, for tasks requiring long-horizon recall.</span>
         </div>
       </div>
 
@@ -694,7 +696,7 @@
 
     </div>
     <div class="pub-footer">
-      A complete list — including 20+ first-author and collaborative works — is available on <a href="https://scholar.google.com/citations?user=s-4Eoi8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+      A complete list (including 20+ first-author and collaborative works) is available on <a href="https://scholar.google.com/citations?user=s-4Eoi8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
     </div>
   </section>
 
