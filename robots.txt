@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khadka.ai/sitemap.xml
